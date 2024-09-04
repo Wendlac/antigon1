@@ -20,6 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    
+    // Exemple de données de mission
+    const missions = [
+        { title: "Illustrateur 2D", company: "DIACFA", budget: 5000, keywords: ["design", "illustration"], date: "2024-08-30", location: "paris", profile: "design" },
+        { title: "Photographe produit", company: "Maison du meuble", budget: 6000, keywords: ["photo", "événement"], date: "2024-08-29", location: "Bobo Dioulasso", profile: "photo" },
+        { title: "Photographe institutionnel", company: "EventPro", budget: 7000, keywords: ["photo", "produit"], date: "2024-08-29", location: "Ouagadougou", profile: "photo" },
+        { title: "Photographe événementiel", company: "EventPro", budget: 3000, keywords: ["photo", "événement"], date: "2024-08-29", location: "Paris", profile: "photo" },
+        { title: "Photographe événementiel", company: "Focus Group", budget: 10000, keywords: ["photo", "événement"], date: "2024-08-29", location: "marseille", profile: "photo" },
+        { title: "Developeur web", company: "Moov Africa", budget: 5000, keywords: ["frontend", "mysql"], date: "2024-08-30", location: "Seattle", profile: "design" },
+        { title: "Designer UX", company: "TechCorp", budget: 5000, keywords: ["design", "mobile"], date: "2024-08-30", location: "Paris", profile: "design" },
+        { title: "Designer UI/UX", company: "Orange", budget: 5000, keywords: ["design", "mobile"], date: "2024-08-31", location: "Koudougou", profile: "design" },
+        { title: "Graphic Design", company: "CFAO", budget: 3000, keywords: ["brand", "mecanique"], date: "2024-07-29", location: "Ouagadougou", profile: "photo" },
+
+        // Ajoute d'autres missions ici
+    ];
+
+
     // Fonction pour afficher les missions
     function displayMissions(missions) {
         missionList.innerHTML = '';
