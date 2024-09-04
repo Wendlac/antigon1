@@ -4,22 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const profileFilter = document.getElementById('profileFilter');
     const budgetRange = document.getElementById('budgetRange');
     const budgetMax = document.getElementById('budgetMax');
-    const locationFilter = document.getElementById('locationFilter');
-
-    // Fonction pour récupérer les missions depuis l'API
-    async function fetchMissions(searchParams = '') {
-        try {
-            const response = await fetch(`http://localhost:3000/api/missions/search${searchParams}`);
-            if (!response.ok) {
-                throw new Error('Erreur lors de la récupération des missions');
-            }
-            return await response.json();
-        } catch (error) {
-            console.error('Erreur:', error);
-            return [];
-        }
-    }
-
+    const locationFilter = document.getElementById('locationFilter');    
     
     // Exemple de données de mission
     const missions = [
@@ -37,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
 
+ 
     // Fonction pour afficher les missions
     function displayMissions(missions) {
         missionList.innerHTML = '';
@@ -47,10 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>${mission.title}</h3>
                 <p><strong>Entreprise:</strong> ${mission.company}</p>
                 <p><strong>Budget:</strong> <span class="budget">${mission.budget}€</span></p>
-                <p><strong>Date:</strong> <span class="date">${new Date(mission.deadline).toLocaleDateString()}</span></p>
-                <p><strong>Localisation:</strong> ${mission.location || 'Non spécifié'}</p>
+                <p><strong>Date:</strong> <span class="date">${mission.date}</span></p>
                 <div class="keywords">
-                    ${mission.skills.map(skill => `<span class="keyword">${skill}</span>`).join('')}
+                    ${mission.keywords.map(keyword => `<span class="keyword">${keyword}</span>`).join('')}
                 </div>
                 <div class="mission-buttons">
                     <button class="apply-button">Postuler</button>
