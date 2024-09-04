@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster une mission - Antigon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="post-mission-page">
+    <header>
+        <a href="index.html" class="logo">Antigon</a>
+        <nav>
+            <a href="post-mission.html"><button>Poster une mission</button></a>
+            <a href="login.html"><button>Se connecter</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Dépose ta mission pour attirer les talents !</h1>
+        <form>
+            <label for="title">Titre de la mission</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="company">Entreprise</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="budget">Budget</label>
+            <input type="number" id="budget" name="budget" required>
+
+            <label for="keywords">Mots-clés</label>
+            <input type="text" id="keywords" name="keywords" required>
+
+            <label for="date">Date de publication</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Poster la mission</button>
+        </form>
+    </main>
+</body>
+</html>

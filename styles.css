@@ -1,0 +1,463 @@
+/* Styles de base */
+:root {
+  --primary-color: #30323D;
+  --secondary-color: #4D5061;
+  --accent-color: #FF686B;
+  --highlight-color: #9FCC2E;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+nav a button:hover {
+  background-color: var(--highlight-color);
+  color: var(--primary-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 5%;
+}
+
+/* Recherche */
+#searchBar {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchBar input {
+  width: 100%;
+  padding: 1rem 2.5rem 1rem 1rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+#searchBar i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+/* Filtres */
+#filterBar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+#filterBar select {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+/* Filtre de budget */
+#budgetFilter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+#budgetRange {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--secondary-color);
+  border-radius: 2px;
+  outline: none;
+  margin: 10px 0;
+}
+
+#budgetRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--highlight-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#budgetRange::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--highlight-color);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.budget-values {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+/* Missions */
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.mission {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.mission:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mission h3 {
+  color: var(--secondary-color);
+  margin-top: 0;
+}
+
+.mission p {
+  margin: 0.5rem 0;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.keyword {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.budget {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.date {
+  color: var(--highlight-color);
+}
+
+.mission-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.mission-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.apply-button {
+  background-color: var(--highlight-color);
+  color: var(--primary-color);
+}
+
+.details-button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.apply-button:hover, .details-button:hover {
+  opacity: 0.9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+/* Styles pour les pages de connexion et d'inscription */
+.auth-page main {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-page h1 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-page label {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.auth-page input[type="text"],
+.auth-page input[type="email"],
+.auth-page input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-page button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-page button[type="submit"]:hover {
+  background-color: var(--highlight-color);
+  color: var(--primary-color);
+}
+
+.auth-page fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.auth-page legend {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.auth-page input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.auth-page form + p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-page form + p a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.auth-page form + p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  nav a button {
+    margin-left: 0;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  #filterBar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #filterBar select, #budgetFilter {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .auth-page main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  #searchBar input {
+    font-size: 0.8rem;
+  }
+
+  .mission {
+    padding: 0.8rem;
+  }
+
+  .auth-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .auth-page input[type="text"],
+  .auth-page input[type="email"],
+  .auth-page input[type="password"] {
+    font-size: 0.9rem;
+  }
+
+  .auth-page button[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
+/* Styles existants... */
+
+/* Ajout des styles pour la page "Poster une mission" */
+.post-mission-page main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-mission-page h1 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.post-mission-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-mission-page label {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.post-mission-page input[type="text"],
+.post-mission-page input[type="number"],
+.post-mission-page input[type="date"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.post-mission-page button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-mission-page button[type="submit"]:hover {
+  background-color: var(--highlight-color);
+  color: var(--primary-color);
+}
+
+/* Ajustements responsifs pour la page "Poster une mission" */
+@media (max-width: 768px) {
+  .post-mission-page main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-mission-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .post-mission-page input[type="text"],
+  .post-mission-page input[type="number"],
+  .post-mission-page input[type="date"] {
+    font-size: 0.9rem;
+  }
+
+  .post-mission-page button[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
+
+/* Le reste du CSS reste inchangé... */

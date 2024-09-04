@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigon - Marketplace pour Freelances Créatifs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Antigon</a>
+        <nav>
+            <a href="post-mission.html"><button id="postMission">Poster une mission</button></a>
+            <a href="login.html"><button id="login">Se connecter</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="searchBar">
+            <input type="text" placeholder="Rechercher une mission...">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <div id="filterBar">
+            <select id="profileFilter">
+                <option value="">👤 Profil</option>
+                <option value="design">🎨 Design</option>
+                <option value="photo">📷 Photographie</option>
+                <option value="illustration">✏️ Illustration</option>
+                <option value="3d">🧊 3D</option>
+            </select>
+            <div id="budgetFilter">
+                <label for="budgetRange">💰 Budget</label>
+                <input type="range" id="budgetRange" name="budgetRange" min="0" max="10000" step="100" value="5000">
+                <div class="budget-values">
+                    <span id="budgetMin">0€</span>
+                    <span id="budgetMax">5000€</span>
+                </div>
+            </div>
+            <select id="locationFilter">
+                <option value="">📍 Location</option>
+                <option value="remote">🏠 Télétravail</option>
+                <option value="paris">🗼 Paris</option>
+                <option value="lyon">🦁 Lyon</option>
+                <option value="marseille">⚓ Marseille</option>
+            </select>
+        </div>
+
+        <div id="missionList">
+            <!-- Les missions seront insérées ici via JavaScript -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
