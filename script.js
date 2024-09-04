@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const missions = await fetchMissions(`?${searchParams.toString()}`);
         displayMissions(missions);
     }
+// Afficher les missions initiales
+displayMissions(missions);
 
     // Initialisation
     filterMissions();
